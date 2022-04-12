@@ -16,7 +16,10 @@ Bot = Client(
 async def dlt(bot, update):
     await update.reply(text="jdjdj")
     await asyncio.sleep(120)
-    await update.delete()
+    await bot.delete_messages(
+             chat_id=update.chat_id,
+             message_ids=update.message_id
+    )
 
 @Bot.on_message(filters.private & filters.command(["start"]))
 async def start(bot, update):
