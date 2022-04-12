@@ -19,4 +19,4 @@ async def dlt(bot, update):
     await update.delete()
 
 
-Bot.run
+Bot.run()
