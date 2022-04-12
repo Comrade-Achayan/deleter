@@ -14,7 +14,7 @@ Bot = Client(
 
 @Bot.on_message(filters.group & (filters.text | filters.reply | filters.photo))
 async def dlt(bot, update):
-    await update.reply(text="")
+   # await update.reply(text="")
     await asyncio.sleep(120)
     await update.delete()
    # await bot.delete_messages(
