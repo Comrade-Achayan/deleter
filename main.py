@@ -12,7 +12,7 @@ Bot = Client(
     api_hash = os.environ["API_HASH"],
 )
 
-@Bot.on_message(filters.group & (filters.bot | filters.user) & (filters.text | filters.reply | filters.photo))
+@Bot.on_message(filters.group & (filters.text | filters.reply | filters.photo))
 async def dlt(bot, update):
    # await update.reply(text="")
     await asyncio.sleep(120)
@@ -21,6 +21,11 @@ async def dlt(bot, update):
   #           chat_id=update.chat_id,
     #         message_ids=update.message_id
  #   )
+
+@Bot.on_message(filters.group & filters.bot & (filters.text | filters.reply | filters.photo))
+async def del(bot, upda):
+    await asyncio.sleep(120)
+    await upda.delete()
 
 @Bot.on_message(filters.private & filters.command(["start"]))
 async def start(bot, update):
