@@ -25,7 +25,7 @@ async def start(bot, update):
 	   # await db.add_user(update.from_user.id)
     
     await update.reply_text(
-        text="hi"         #START_TEXT.format(update.from_user.mention),
+        text="hi",         #START_TEXT.format(update.from_user.mention),
         disable_web_page_preview=True,
 	#reply_markup=START_BUTTONS
     )
