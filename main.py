@@ -14,10 +14,10 @@ Bot = Client(
 
 @Bot.on_message(filters.group & (filters.text | filters.reply | filters.photo))
 async def dlt(bot, update):
-    await asyncio.sleep(60)
+    await asyncio.sleep(10)
     await update.delete()
 
-@Bot.on_message(filters.group & filters.bot & filters.admin)
+@Bot.on_message(filters.group & filters.bot)
 async def det(bot, update):
     await asyncio.sleep(120)
     await update.delete()
