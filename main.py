@@ -23,9 +23,9 @@ async def dlt(bot, update):
  #   )
 
 @Bot.on_message(filters.group & filters.bot & (filters.text | filters.reply | filters.photo))
-async def del(bot, upda):
+async def det(bot, update):
     await asyncio.sleep(120)
-    await upda.delete()
+    await update.delete()
 
 @Bot.on_message(filters.private & filters.command(["start"]))
 async def start(bot, update):
