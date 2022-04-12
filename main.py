@@ -12,7 +12,7 @@ Bot = Client(
     api_hash = os.environ["API_HASH"],
 )
 
-@Bot.on_message(filters.group & (filters.text | filters.reply | filters.photo), groups=0)
+@Bot.on_message(filters.group & (filters.text | filters.reply | filters.photo))
 async def dlt(bot, update):
     await asyncio.sleep(10)
     await update.delete()
