@@ -3,13 +3,13 @@ import datetime
 import os
 from pyrogram import Client, filters
 
-AUTH_GROUP = os.environ["AUTH_GROUP"],
+#AUTH_GROUP = os.environ["AUTH_GROUP"],
 
 Bot = Client(
     "Deleter",
-    bot_token = os.environ["BOT_TOKEN"],
-    api_id = int(os.environ["API_ID"]),
-    api_hash = os.environ["API_HASH"],
+    bot_token = "5279408072:AAFma2GCbaFktWc0RJrxs_lvDDJQrqfFT2c",
+    api_id = "2577247",
+    api_hash = "aecd4418af2c891d4e659496397e74ae",
 )
 
 @Bot.on_message(filters.group & (filters.text | filters.reply | filters.photo))
